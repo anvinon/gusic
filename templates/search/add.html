@@ -1,0 +1,11 @@
+<h2>入力したアーティスト（{{ name }}）の属するジャンル一覧</h2>
+<h2>聴きたいジャンルをクリックしてください。</h2>
+<form action="other_artist" method="get" name="genre" id"=form">
+	<select id="id_list" name="name_list">
+    	{% for g in genres %}
+    <option value="{{ g }}"> {{ g }}</option>
+    	{% endfor %}
+	</select>
+	<input type="hidden" name="name" value= "{{ name }}">
+    <input type="button" value="選択" id="submit()" onclick="submit()" />
+</form>
