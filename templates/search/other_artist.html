@@ -1,0 +1,10 @@
+<h2>選択したジャンルに属するアーティストは、{{ selected_artist }}以外にもこういったアーティストがあります。</h2>
+<h2>興味のあるアーティストを選んでください。</h2>
+<form action="song" method="get" name="artist" id"=form">
+	<select id="form" name="artist">
+    	{% for a in artist_list %}
+    <option value="{{ a }}">{{ a }}</option>
+    	{% endfor %}
+	</select>
+<input type="button" value="選択" id="submit()" onclick="submit()" />
+</form>

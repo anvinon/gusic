@@ -1,0 +1,10 @@
+<h2>選択したアーティストで、フリーダウンロード可の作品は以下のとおりです。</h2>
+<h2>聴きたい曲を以下の中から選択してください。</h2>
+<form action="jump" method="get" name="jump" id"=form">
+	<select id="song" name="song">
+    	{% for s in songs %}
+    <option value="{{ s }}">{{ s }}</option>
+    	{% endfor %}
+	</select>
+<input type="button" value="選択" id="submit()" onclick="submit()" />
+</form>
