@@ -19,6 +19,8 @@ Django = "==2.0.3"
 "pep8" = "*"
 "pep257" = "*"
 gunicorn = "*"
+pylint = "*"
+pylint-django = "*"
 
 [dev-packages]
 
