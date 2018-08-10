@@ -21,6 +21,7 @@ Django = "==2.0.3"
 gunicorn = "*"
 pylint = "*"
 pylint-django = "*"
+"autopep8" = "*"
 
 [dev-packages]
 

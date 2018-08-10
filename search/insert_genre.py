@@ -16,7 +16,7 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre1)
-                b.save()     
+                b.save()
         except :
             pass
         try :
@@ -26,7 +26,7 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre2)
-                b.save()     
+                b.save()
         except :
             pass
         try :
@@ -36,7 +36,7 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre3)
-                b.save()     
+                b.save()
         except :
             pass
         try :
@@ -46,7 +46,7 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre4)
-                b.save()     
+                b.save()
         except :
             pass
         try :
@@ -56,7 +56,7 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre5)
-                b.save()     
+                b.save()
         except :
             pass
         try :
@@ -66,7 +66,7 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre6)
-                b.save()     
+                b.save()
         except :
             pass
         try :
@@ -76,7 +76,7 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre7)
-                b.save()     
+                b.save()
         except :
             pass
         try :
@@ -86,7 +86,7 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre8)
-                b.save()     
+                b.save()
         except :
             pass
         try :
@@ -96,8 +96,8 @@ def insert_genre() :
                 pass
             else :
                 b = Genre(name = genre9)
-                b.save()     
+                b.save()
         except :
             pass
-        
+
 insert_genre()
