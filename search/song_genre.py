@@ -87,4 +87,5 @@ def song_genre():
 #         sleep(1)
     print("追加終了")
 
+
 song_genre()

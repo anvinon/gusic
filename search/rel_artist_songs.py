@@ -22,4 +22,6 @@ def rel_artist_songs():
             print("artistテーブルのID")
             print(r)
             print("でエラー発生")
+
+
 rel_artist_songs()

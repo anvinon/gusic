@@ -24,13 +24,13 @@ def index(request):
             'initialForm': initialForm,
             'artists_list': artists_list,
             'history': history,
-        }
+            }
         return render(request, 'search/index.html', f)
     else:
         f = {
             'form': form,
             'initialForm': initialForm,
-        }
+            }
         return render(request, 'search/index.html', f)
 
 
@@ -41,7 +41,7 @@ def add(request):
     sh.save()
     genres = []
     name = Artist.objects.filter(
-        name__iexact=form).values_list('name', flat=True)[0]
+        nme__iexact=form).values_list('name', flat=True)[0]
     genre1 = Artist.objects.filter(
         name__iexact=form).values_list('genre1', flat=True)[0]
     genres.append(genre1)
@@ -73,7 +73,7 @@ def add(request):
     j = {
         'name': name,
         'genres': genres,
-    }
+        }
     return render(request, 'search/add.html', j)
 
 
@@ -100,7 +100,7 @@ def other_artist(request):
     f = {
         'selected_artist': selected_artist,
         'artist_list': artist_list
-    }
+        }
     return render(request, 'search/other_artist.html', f)
 
 
@@ -111,7 +111,7 @@ def song(request):
     songs = list(songs)
     f = {
         'songs': songs
-    }
+        }
     return render(request, 'search/song.html', f)
 
 

@@ -40,4 +40,5 @@ def get_songs():
         sleep(1)
     print("スクレイピング終了")
 
+
 get_songs()

@@ -21,4 +21,5 @@ def insert_songs():
         aas = ArtistAndSongs(artist_id=a_id, song_id=r)
         aas.save()
 
+
 insert_songs()
