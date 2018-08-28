@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import dj_database_url
 import os
+import dj_database_url
 from django.conf.global_settings import STATIC_ROOT
 
 
@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'gusic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/anvinon/gusic/db.sqlite3',
+        'NAME': os.path.join(os.getcwd(), 'db.sqlite3'),
     }
 }
 

@@ -1,45 +1,62 @@
+<!DOCTYPE html>
+<html>
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'search/css/style.css' %}" />
-<h1>Gusic</h1>
-<h2>アーティスト名を入力してください。</h2>
-<h3>※ご参考までに以下のインクリメンタルサーチもご利用ください。</h3>
-    <form action="add" method="get">
+  <head>
+    <meta charset="utf-8">
+    <title>Gusic - The best way to meet awesome DJENT songs</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'search/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'search/css/bootstrap4-executive-suite.css' %}" />
+  </head>
+  <body>
+
+    <div class="jumbotron py-0 bg-light text-dark mb-0 radius-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 ml-auto jumbo-vertical-center">
+            <div>
+              <h1 class="display-3 mb-2 display-fix">Gusic</h1>
+              <span class="text-merriweather">Do you meet awesome DJENT song? use Gusic!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5">
+      <form action="add" method="get">
         {{ form.errors.name }}
         <label>{{ form.name.label }}{{ form.name }}</label><br/>
         <input type="submit" value="検索">
-    </form>
-
-<h2>アーティスト名の頭文字から選択してから、下記に表示されるインクリメンタルサーチをご利用ください。</h2>
-    <form action="index" method="get" name="initial" id"=initial">
+      </form>
+      <h2>アーティスト名の頭文字</h2>
+      <form action="index" method="get" name="initial" id"=initial">
         {{ initialForm.errors.initial }}
         <label>{{ initialForm.initial }}</label><br/>
         <input type="button" value="選択" id="submit()" onclick="submit()" />
-    </form>
-<h2>インクリメンタルサーチ</h2>
-    <input id="keyword" type="text" />
-	<ol id="list">
-	{% url 'search:genre' as genre_url %}
-	{% for a in artists %}
-	
-<li><a href="{% url 'search:genre' %}">{{ a.name }}</a></li>	
-	{% endfor %}
-	</ol>
-	
-<h2>タイムライン</h2>
-
-<h3>アーティストの検索履歴</h3>
-<ul>
-	{% for i, w, c in history %}
-	<li>通し番号：{{ i }}　検索単語：{{ w }}　検索日時：{{ c }}</li>
-	↑
-<a href="{% url 'search:memo' search_id=i %}">通し番号{{ i }}のメモを書く</a>
-	{% endfor %}	
-</ul>
-<h3>曲の選択履歴</h3>
-
-
-<script type="text/javascript">
-	var artists = {{ artists_list|safe }};
-</script>	
-
-<script src="{% static 'search/js/index.js' %}"></script>
+      </form>
+      インクリメンタルサーチが可能です<br>
+      <input id="keyword" type="text" />
+	    <ol id="list">
+	      {% url 'search:genre' as genre_url %}
+        {% for a in artists %}
+        <li><a href="{% url 'search:genre' %}">{{ a.name }}</a></li>
+	      {% endfor %}
+      </ol>
+      <h2>アーティストの検索履歴</h2>
+        <ul>
+	        {% for i, w, c in history %}
+	        <li>通し番号：{{ i }}　検索単語：{{ w }}　検索日時：{{ c }}</li>
+	         ↑
+          <a href="{% url 'search:memo' search_id=i %}">通し番号{{ i }}のメモを書く</a>
+	        {% endfor %}
+        </ul>
+      <h2>曲の選択履歴</h2>
+  <script type="text/javascript">
+    var artists = {{ artists_list|safe }};
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="{% static 'search/js/index.js' %}"></script>
+</html>
