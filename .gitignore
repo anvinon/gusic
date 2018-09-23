@@ -94,8 +94,10 @@ db.sqlite3
 /scrapingdata.sqlite3
 .venv
 .history/
+.vscode/
 scripts/test_script.py
 gusic_current
 *.sublime-project
 gusic.sublime-workspace
 gusic_db.json
+.vscode
