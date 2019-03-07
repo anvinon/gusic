@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
+from django.template.defaultfilters import urlencode
 from .forms import *
 from .models import *
-from django.template.defaultfilters import urlencode
 
 
 def index(request):
@@ -35,7 +35,6 @@ def index(request):
 
 
 def add(request):
-    #    genre = GenreForm(request.GET or None)
     form = request.GET['name']
     sh = SearchHistory(word=form)
     sh.save()
@@ -106,8 +105,7 @@ def other_artist(request):
 
 def song(request):
     artist = request.GET['artist']
-    songs = Songs.objects.filter(
-        artist__iexact=artist, free_download=True).values_list('title', flat=True)
+    songs = Songs.objects.filter(artist__iexact=artist, free_download=True).values_list('title', flat=True)
     songs = list(songs)
     f = {
         'songs': songs
