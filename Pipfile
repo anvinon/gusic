@@ -15,6 +15,8 @@ gunicorn = "*"
 "autopep8" = "*"
 pylint = "*"
 django = "*"
+pymysql = "*"
+mysqlclient = "*"
 
 [dev-packages]
 

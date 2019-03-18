@@ -1,3 +1,92 @@
-input.search_text {
-    color: green
+body, html {
+  height: 100%;
+  background-color: #b9c1ca;
+}
+
+h1, h2, h3, h4, h5, h6, p, body {
+  line-height: 1.77;
+  font-size: 18px;
+  color: #4a4a4a;
+  font-family: Georgia;
+  margin: 0;
+  padding: 32px;
+}
+
+.body-frame {
+    background-color: #b4ac8c;    
+    padding: 4px;
+}
+
+.header-frame {
+	backgroud-color: #f7f3e7;	
+}
+
+.header {
+	background-color: #f7f3e7;
+	width: 800px;
+	height: 500px;
+	margin: auto;
+}
+
+.image-frame {
+	float: left;
+	width: 450px;
+	height: 500px;
+}
+
+.image {
+	margin: 100px 0;
+	width: 450px;
+	height: 300px;
+}
+
+.title-copy-frame {
+	float: right;
+	width: 350px;
+	height: 300px;
+	margin: 100px 0;
+}
+
+.title {
+	font-size: 32px;
+	padding: 15px;
+	height: 120px;	
+	text-align: center;
+	font-family: 'PT Serif', serif;
+}
+
+.copy {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.content-frame {
+	background-color: #b9bea4;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.initial-form {
+	text-align: center;
+}
+
+.initial {
+	text-align: center;
+	padding: 16px;
+}
+
+.initial-submit {
+	margin: 0 auto;
+}
+
+.is-frame {
+	
+}
+
+.is-title {
+	text-align: center;
+}
+
+#is-kw {
+	text-align: center;
 }
